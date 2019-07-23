@@ -33,6 +33,12 @@ public final class SystemConfiguration implements Serializable {
 	@Column(nullable = false)
 	private Date lastUpdated;
 
+	public SystemConfiguration()
+	{
+		this.createdAt = new Date();
+		this.lastUpdated = new Date();
+	}
+
 	public static SystemConfiguration newInstance() {
 		return new SystemConfiguration();
 	}

@@ -39,7 +39,7 @@ public class SensorService {
 	public void printCurrentPresence() {
 		if (bridgeService.isConnected()) {
 			Map<PHPresenceSensor, Boolean> sensorStatus = getSensorStatus();
-			sensorStatus..filter().forEach((sensor, presence) -> {
+			sensorStatus.forEach((sensor, presence) -> {
 				if (presence)
 				{
 					LOG.info("Presence detected in areas: {}", sensor.getName());

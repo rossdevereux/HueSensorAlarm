@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Hue Sensor Alarm</title>
+    <link rel="stylesheet" th:href="@{/webjars/materializecss/1.0.0/css/materialize.min.css}" />
+    <script th:src="@{/webjars//materializecss/1.0.0/js/materialize.min.js}"></script>
+</head>
+<body>
+
+    <div th:replace="fragments/header :: header"> This header content is going to be replaced.</div>
+
+    <div class="container">
+        <div layout:fragment="content">
+            <h1>This is the Layout's main section</h1>
+            <p>This content will be replaced if the page
+                using the layout also defines a layout:fragment="content" segment. </p>
+        </div>
+    </div>
+
+    <footer th:insert="fragments/footer :: footer" class="page-footer">
+        This content will remain, but other content will be inserted after it.
+    </footer>
+
+    <script th:src="@{/webjars//materializecss/1.0.0/js/materialize.min.js}"></script>
+
+</body>
+</html>

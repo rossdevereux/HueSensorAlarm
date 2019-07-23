@@ -30,6 +30,11 @@ public class Event implements Serializable {
     @Column(nullable = false)
     private Date createdAt;
 
+    public Event()
+    {
+        this.createdAt = new Date();
+    }
+
     public Long getId() {
         return id;
     }
